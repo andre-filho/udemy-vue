@@ -11,8 +11,12 @@
   <body>
     <script src="script.js"></script>
     <section id="app">
-      <p v-if="show">now you see me <span>shdfihsdf</span></p>
-      <p v-else>now you don't</p>
+      <!-- template is a tag that doesn't render in the DOM, so it is usefull
+           this way -->
+      <template v-if="show">
+        <h1>heading</h1>
+        <p>inside a template</p>
+      </template>
       <p>you will see me always</p>
       <button type="button" @click="show = !show">toggle</button>
     </section>

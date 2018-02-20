@@ -6,12 +6,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-    <script src="script.js"></script>
     <title>vue</title>
   </head>
   <body>
+    <script src="script.js"></script>
     <section id="app">
-      
+      <p v-if="show">now you see me <span>shdfihsdf</span></p>
+      <p v-else>now you don't</p>
+      <p>you will see me always</p>
+      <button type="button" @click="show = !show">toggle</button>
     </section>
   </body>
 </html>

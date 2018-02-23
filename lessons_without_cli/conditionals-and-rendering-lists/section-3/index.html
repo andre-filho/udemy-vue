@@ -33,6 +33,12 @@
       <ul>
         <li v-for="person in persons">{{person.name}}, {{ person.age }}</li>
       </ul>
+
+      <template v-for="(ingredient, index) in ingredients">
+        <h1>{{ ingredient }}</h1>
+        <p>{{ index }}</p>
+      </template>
+
     </section>
 
   </body>

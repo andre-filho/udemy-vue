@@ -9,18 +9,31 @@
     <title>vue</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    <script>
+      var vm = new Vue({
+        el: "#app",
+        data: {
+          ingredients: [
+            'meat',
+            'fruit',
+            'cookies'
+          ],
+          persons: [
+            {name: 'Max', age: 37, color: 'red'},
+            {name: 'Anna', age: 'unknown', color: 'pink'}
+          ]
+        }
+      });
+    </script>
+
     <section id="app">
-      <!-- template is a tag that doesn't render in the DOM, so it is usefull
-           this way -->
-      <template v-if="show">
-        <h1>heading</h1>
-        <p>inside a template</p>
-      </template>
-      <!-- v-show makes the element hidden -->
-      <p v-show="show">you will see me always</p>
-      <!-- <p>you will see me always</p> -->
-      <button type="button" @click="show = !show">toggle</button>
+      <ul>
+        <li v-for="ingredient in ingredients">{{ ingredient }}</li>
+      </ul>
+      <ul>
+        <li v-for="person in persons">{{person.name}}, {{ person.age }}</li>
+      </ul>
     </section>
+
   </body>
 </html>

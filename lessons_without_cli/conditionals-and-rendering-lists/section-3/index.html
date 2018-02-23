@@ -28,7 +28,7 @@
 
     <section id="app">
       <ul>
-        <li v-for="ingredient in ingredients">{{ ingredient }}</li>
+        <li v-for="(ingredient, i) in ingredients">{{ ingredient }}({{ i++ }})</li>
       </ul>
       <ul>
         <li v-for="person in persons">{{person.name}}, {{ person.age }}</li>
